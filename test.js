@@ -2,7 +2,7 @@ const assert = require("assert");
 const httpMocks = require("node-mocks-http");
 const exampleRouteHandler = require("./example-router");
 describe("Example Test 1", () => {
-  it("should return 'Goodbye Earthling!' for GET /example", () => {
+  it("should return 'Deployed the Earthling to Digitcal Ocean :)!' for GET /example", () => {
     const mockRequest = httpMocks.createRequest({
       method: "GET",
       url: "/example"
@@ -10,7 +10,7 @@ describe("Example Test 1", () => {
     const mockResponse = httpMocks.createResponse();
     exampleRouteHandler(mockRequest, mockResponse);
     const actualResponseBody = mockResponse._getData();
-    const expectedResponseBody = "Goodbye Earthling!";
+    const expectedResponseBody = "Deployed the Earthling to Digitcal Ocean :)!";
     assert(actualResponseBody, expectedResponseBody);
   });
 });
